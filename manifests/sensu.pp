@@ -19,6 +19,7 @@ class psick::sensu (
   Boolean $is_client                    = true,
   Boolean $is_server                    = false,
   Boolean $is_api                       = false,
+  Boolean $is_manage_repo               = false,
 
   String $rabbitmq_class                = '',
   String $redis_class                   = '',
@@ -43,6 +44,7 @@ class psick::sensu (
     api_bind          => $api_bind,
     api_host          => $api_host,
     api_port          => $api_port,
+    manage_repo       => $is_manage_repo,
     rabbitmq_user     => $rabbitmq_user,
     rabbitmq_password => $rabbitmq_password,
     rabbitmq_vhost    => $rabbitmq_vhost,
